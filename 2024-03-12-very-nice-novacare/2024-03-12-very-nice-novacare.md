@@ -27,7 +27,7 @@ note: if you're like me, you probably have a few units of computing lying around
 
 ## Sky kan være dyrt 🌩️
 
-note: the cloud is a remarkable technology in it's own right. Its easy to set up and you don't need to maintain the physical machines running your software. When using the cloud, you will use computing power and compute isn't cheap. Cloud costs can also bite you when "pay as you go" plans can rack up the bills when unexpected spikes in traffic occur.
+note: the cloud is a remarkable technology in it's own right. Its easy to set up services and you don't need to maintain the physical machines running your software. When using the cloud, you will use computing power and compute isn't cheap. Cloud costs can also bite you when "pay as you go" plans can rack up the bills when unexpected spikes in traffic occur.
 
 ---
 
@@ -101,8 +101,15 @@ note: By peeling away the screen and the case you can reduce some of the power d
 
 ---
 
+## Some k8s concepts
+
+note: 
+
+---
+
 ## Installere k3s
 
+note: k3s is a lightweight, easy-to-install Kubernetes distribution designed for edge computing, IoT, and small to medium-sized clusters, emphasizing simplicity and resource efficiency.
 ---
 
 ## Installere k3s
@@ -184,3 +191,7 @@ $ kubectl create secret generic tunnel-credentials \
 ```
 
 note: We're going to use Cloudflare tunnels to tunnel services to the DNS and ultimately the internet. This is a way to tunnel applications to the internet without opening any ports on the your local network. Provided that you have created a Cloudflare account and `cloudflared` cli installed, setting up a tunnel is suprisingly easy.
+
+---
+
+note: Nevn SaaS og å være uavhengig av sky. Vise noen bilder av laptopene. Forklar en setning om deployment, service, loadbalancer, pod. Første 4 slides kan kombineres i en og må forklares på 2 min. Mer strømfokusert? Cilium, yes. Kepler, yes.
