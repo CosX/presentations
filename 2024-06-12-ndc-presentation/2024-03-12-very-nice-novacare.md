@@ -92,6 +92,13 @@ note: Just for fun and in the spirit of comparing apples to oranges, the minimal
 
 ---
 
+## Services on the internet with cloudflare tunnels
+- No port openings needed
+- Install cloudflared in the cluster
+- blog.solgard.solutions survives after 10.3K requests made in 2 minutes
+
+---
+
 ## Suprise!
 Can I add my smart phone to the cluster?
 
@@ -107,4 +114,4 @@ Some approaches:
 ## Thank you, NDC!
 
 - Blog post...
-- Github repo...
+- https://github.com/CosX/very-nice-cluster-public
