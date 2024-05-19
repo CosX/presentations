@@ -21,9 +21,11 @@ note: E-waste is a big environmental challenge. A total of 154 000 tons of e-was
 
 ---
 
-## Harvesting E-waste guts and make stuff!
+## Harvest E-waste guts and make stuff!
 
-note: A laptop has a lot of components to build stuff out of. I've seen people creating their own home surveilence systems out of webcams as an example. We will be utilizing the logic boards of old laptops and create a home lab. A home lab can come in many different variations and sizes. The simplest home labs run on consumer grade machines that you already use, and the most advanced ones are comparable to enterprise grade server setups. It's really what you make it to be. In my case, I found 3 old laptops from my student years and early career. They pack the same punch as many modern single board computers and I think it's a shame that these computers go un-utilized.
+A "Frakenstein" home lab 🧟‍♂️
+
+note: A laptop has a lot of components to build stuff out of. I've seen people creating their own home surveilence systems out of webcams as an example. We will be utilizing the logic boards of old laptops and create a home lab. A home lab can come in many different variations and sizes. The simplest home labs run on consumer grade machines, and the most advanced ones are comparable to enterprise grade server setups. It's really what you make it to be. In my case, I found 3 old laptops from my student years and early career. They pack the same punch as many modern single board computers and I think it's a shame that these computers go un-utilized.
 
 ---
 
@@ -41,12 +43,12 @@ note: I think k3s is a good match for this kind of build. It is a lightweight, e
 
 ---
 
-## Install k3s
+## Install k3s with one line!
 ```bash
 $ curl -sfL https://get.k3s.io | sh - 
 ```
 
-note: This takes about 30 seconds to run and will set up your machine as a k3s node! This command is also configurable to suit your needs. We're going to install one server node and two worker nodes. We will disable traefik and servicelb and replace them with cloudflared and metallb
+note: This takes about 30 seconds to run and will set up your machine as a k3s node! This command is also configurable to suit your needs. You can disable things that you want to replace. We will disable traefik and servicelb and replace them with cloudflared and metallb
 
 ---
 
@@ -57,6 +59,8 @@ $ curl -sfL https://get.k3s.io |
   \ K3S_URL=https://ip-address-of-control-plane:6443 
   \ K3S_TOKEN=mynodetoken sh -
 ```
+
+note: We're going to install one control plane and two worker nodes. You could also set up three control planes to be offer high availabiliy, however this would require more resources. 
 
 ---
 
@@ -72,7 +76,7 @@ $ curl -sfL https://get.k3s.io |
 
 ---
 
-## What I run on my cluster
+## What I run on my home lab
 - AdGuard Home
 - Prometheus with exporters for:
   - Blackbox (Uptime)
@@ -99,19 +103,7 @@ note: Just for fun and in the spirit of comparing apples to oranges, the minimal
 
 ---
 
-## Suprise!
-Can I add my smart phone to the cluster?
-
----
-
-## Perhaps?
-Some approaches:
-- PostmarketOS
-- Docker + Termux
-
----
-
 ## Thank you, NDC!
 
-- Blog post...
+- https://blog.solgard.solutions
 - https://github.com/CosX/very-nice-cluster-public
