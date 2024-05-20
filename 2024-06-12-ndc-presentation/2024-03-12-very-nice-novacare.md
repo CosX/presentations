@@ -17,15 +17,15 @@ note: Hello! My name is Karl Solgård. I'm a senior consultant at NOVACARE durin
 
 <img src="81176701.jpg"/>
 
-note: E-waste is a big environmental challenge. A total of 154 000 tons of e-waste was collected in Norway during 2022 which is about 28 kgs of e-waste per person. Still a lot of e-waste lies around in the norwegian households, dusting away. How can we turn some of this waste into something useful?
+note: E-waste is a significant environmental challenge. A total of 154,000 tons of e-waste was collected in Norway during 2022, which is about 28 kg per person. Still, a lot of e-waste lies around Norwegian households, dusting away. How can we turn some of this waste into something useful?
 
 ---
 
 ## Harvest E-waste guts and make stuff!
 
-A "Frakenstein" home lab 🧟‍♂️
+A "Frakenstein's Lab" Home Server 🧟‍♂️
 
-note: A laptop has a lot of components to build stuff out of. I've seen people creating their own home surveilence systems out of webcams as an example. We will be utilizing the logic boards of old laptops and create a home lab. A home lab can come in many different variations and sizes. The simplest home labs run on consumer grade machines, and the most advanced ones are comparable to enterprise grade server setups. It's really what you make it to be. In my case, I found 3 old laptops from my student years and early career. They pack the same punch as many modern single board computers and I think it's a shame that these computers go un-utilized.
+note: Like Dr. Frankenstein, who brought new life to assembled parts, we're reviving old laptops by using their logic boards to create a home lab. These laptops, relics from my student years and early career, still pack a punch equivalent to many modern single-board computers. It's a shame to let such potential go to waste. Today, we're not just recycling — we're creating a monster of efficiency and sustainability that breathes new life into what was once considered electronic waste.
 
 ---
 
@@ -39,20 +39,18 @@ note: A laptop has a lot of components to build stuff out of. I've seen people c
 
 How many lines of code does it take to set up a k3s instance?
 
-note: I think k3s is a good match for this kind of build. It is a lightweight, easy-to-install Kubernetes distribution designed for edge computing, IoT, and small to medium-sized clusters, emphasizing simplicity and resource efficiency.
+note: k3s is a good match for this kind of build. It is a lightweight, easy-to-install Kubernetes distribution designed for edge computing, IoT, and small to medium-sized clusters, emphasizing simplicity and resource efficiency. Husk spm!!!
 
 ---
 
 ## Install k3s with one line!
+
+Add the control plane:
 ```bash
 $ curl -sfL https://get.k3s.io | sh - 
 ```
 
-note: This takes about 30 seconds to run and will set up your machine as a k3s node! This command is also configurable to suit your needs. You can disable things that you want to replace. We will disable traefik and servicelb and replace them with cloudflared and metallb
-
----
-
-## Add worker nodes
+... and to add worker nodes:
 
 ```bash
 $ curl -sfL https://get.k3s.io | 
@@ -60,19 +58,22 @@ $ curl -sfL https://get.k3s.io |
   \ K3S_TOKEN=mynodetoken sh -
 ```
 
-note: We're going to install one control plane and two worker nodes. You could also set up three control planes to be offer high availabiliy, however this would require more resources. 
+note: This takes about 30 seconds to run and will set up your machine as a k3s control plane! This command is also configurable to suit your needs. You can disable things that you want to replace, such as traefik and servicelb. 
 
 ---
 
 ![Alt text](image.png)
 
----
+note: this is an overview of the relationship between the machines. We're going to install one control plane and two worker nodes. This setup prioritizes resourcefulness over high availability. The control plane manages the cluster, handling all administrative tasks like scheduling applications and maintaining their desired state.Worker nodes execute the actual application workloads, running the containers that comprise your applications.
 
-![Alt text](20240310_203712.jpg)
 
 ---
 
 ![Alt text](image-1.png)
+
+---
+
+![Alt text](20240310_203712.jpg)
 
 ---
 
@@ -89,17 +90,17 @@ note: We're going to install one control plane and two worker nodes. You could a
 ---
 
 ## Power consumption ⚡
-- The cluster draws about .03 kWh
+- The cluster draws about 30 Wh
 - Monthly cost of 16,5 NOK (1,52 USD) given a kWh rate of 0,767 NOK (0,07 USD)
 
-note: Just for fun and in the spirit of comparing apples to oranges, the minimal "free" tier to an AKS cluster would be a monthly cost of 35,34 USD (1 VM, 4 GB RAM).
+note: Just for fun and in the spirit of comparing apples to oranges, the minimal "free" tier to an azure kubernetes instance would be a monthly cost of 35,34 USD (1 VM, 4 GB RAM).
 
 ---
 
 ## Services on the internet with cloudflare tunnels
 - No port openings needed
 - Install cloudflared in the cluster
-- blog.solgard.solutions survives after 10.3K requests made in 2 minutes
+- blog.solgard.solutions survives after 10.3K requests made in 2 minutes and hasn't been "hugged to death" by reddit
 
 ---
 
