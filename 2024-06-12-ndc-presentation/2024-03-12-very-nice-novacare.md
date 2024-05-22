@@ -66,7 +66,7 @@ note: This takes about 30 seconds to run and will set up your machine as a k3s c
 
 ![Alt text](image.png)
 
-note: this is an overview of the relationship between the machines. We're going to install one control plane and two worker nodes which is a setup that prioritizes resourcefulness. Worker nodes execute the actual application workloads, running the containers that contain your applications. The control plane has an added role of managing the cluster, handling all administrative tasks like scheduling applications and maintaining their desired state.
+note: this is an overview of the relationship between my machines. We're going to install one control plane and two worker nodes which is a setup that prioritizes resourcefulness. Worker nodes execute the actual application workloads, running the containers that contain your applications. The control plane has an added role of managing the cluster, handling all administrative tasks like scheduling applications and maintaining their desired state.
 
 
 ---
