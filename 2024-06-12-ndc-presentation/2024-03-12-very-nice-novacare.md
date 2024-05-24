@@ -15,6 +15,13 @@ note: Hello everybody! So nice to be here at NDC! My name is Karl Solgård. I wo
 
 ---
 
+## Agenda
+- Motivation to make a kubernetes cluster at home
+- How to set up k3s on laptops
+- Quick overview of applications and experiences
+
+---
+
 ## E-Waste is a big environmental challenge
 
 <img src="81176701.jpg"/>
@@ -41,7 +48,7 @@ note: Like Dr. Frankenstein, who brought new life to assembled parts, we're revi
 
 How many lines of code does it take to set up a k3s instance?
 
-note: We use k3s! Kubernetes is a highly declarative platform for managing and orchestrating containerized applications across a cluster of machines. k3s is a lightweight, easy-to-install variant of Kubernetes designed for simplicity and resource efficiency. Which makes this a good fit for this kind of build. Husk spm!!!
+note: We use k3s! Kubernetes is a highly configurable platform for managing and orchestrating containerized applications across a cluster of machines. k3s is a lightweight, easy-to-install variant of Kubernetes designed for simplicity and resource efficiency. Which makes this a good fit for this kind of build. Husk spm!!!
 
 ---
 
@@ -105,6 +112,12 @@ note: Just for fun and in the spirit of comparing apples to oranges, the minimal
 - blog.solgard.solutions survives after 10.3K requests made in 2 minutes and hasn't been "hugged to death" by reddit
 
 note: Some of my services is exposed to the internet and is publicly available. I achieve this using cloudflare tunnels. This require no port openings and is just a simple configuration, mapping the services to the given DNS. 
+
+---
+
+## Conclusion
+- Old hardware is still usable 👴
+- Good way to learn Kubernetes and to decrease your E-Waste 🌿
 
 ---
 
