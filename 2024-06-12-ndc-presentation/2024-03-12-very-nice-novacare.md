@@ -16,8 +16,8 @@ note: Hello everybody! So nice to be here at NDC! My name is Karl Solgård. I wo
 ---
 
 ## Agenda
-- Motivation to make a kubernetes cluster at home
-- How to set up k3s on laptops
+- Motivation to make a Kubernetes cluster at home
+- How to set up k3s
 - Quick overview of applications and experiences
 
 ---
