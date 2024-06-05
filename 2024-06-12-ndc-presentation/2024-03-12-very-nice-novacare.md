@@ -7,16 +7,16 @@ enableMenu: false
 
 🏠 + 💻 = ♻️
 
-Karl Solgård, NOVACARE AS
+Karl Solgård (@KarlSolgard) NOVACARE AS
 
 12.06.2024 @ NDC
 
-note: Hello everybody! So nice to be here at NDC! My name is Karl Solgård. I work as a senior consultant at a company called NOVACARE. I'm currently on paternity leave so I have a lot of time to keep me busy. And one of the things that I have kept me busy is my home lab built with kubernetes and old E-waste.
+note: Hello everybody! So nice to be here at NDC! My name is Karl Solgård. I work as a senior consultant at a company called NOVACARE. I'm currently on paternity leave so I have a lot of time to do side projects. And one of my side projects is my home lab built with kubernetes and old E-waste.
 
 ---
 
 ## Agenda
-- Motivation to make a Kubernetes cluster at home
+- Motivations behind making a Kubernetes cluster at home
 - How to set up k3s
 - Quick overview of applications and experiences
 
@@ -42,6 +42,7 @@ note: Like Dr. Frankenstein, who brought new life to assembled parts, we're revi
 
 ![Alt text](20240213_082927.jpg)
 
+note: Speaking of monsters! Have you seen this monstrosity? This was a picture of my home lab in the prototyping stage. My wife is embarrased that i'm showing you this image, but I'm actually proud of this! Husk spm!
 ---
 
 ## kubernetes and k3s!
@@ -86,6 +87,16 @@ note: this is an overview of the relationship between my machines. We're going t
 
 ---
 
+## What didn't work?
+
+I tried adding smartphones as worker nodes
+- PostmarketOS
+- Termux with docker support 
+
+note: A collegue of mine encouraged me to try adding phones to the mix. I found an awesome project called PostmarketOS. The project installs a fully fledged Alpine Linux distribution on the phone. It didn't work or wasn't supported on any of my devices unfortunately. I also tried using termux with docker support, however this was very flaky as the android OS already uses most of the phones resources and the painful process of rebuilding and flashing the phones kernel.
+
+---
+
 ## What I run on my home lab 🥼
 - AdGuard Home
 - Prometheus with exporters for:
@@ -99,7 +110,7 @@ note: this is an overview of the relationship between my machines. We're going t
 ---
 
 ## Power consumption ⚡
-- The cluster draws about 30 Wh
+- The cluster draws about 30 W
 - Monthly cost of 16,5 NOK (1,52 USD) given a kWh rate of 0,767 NOK (0,07 USD)
 
 note: Just for fun and in the spirit of comparing apples to oranges, the minimal "free" tier to an azure kubernetes instance would be a monthly cost of 35,34 USD (1 VM, 4 GB RAM).
@@ -109,15 +120,16 @@ note: Just for fun and in the spirit of comparing apples to oranges, the minimal
 ## Public services with cloudflare tunnels ☁️🔥
 - No port openings needed
 - Install cloudflared in the cluster
-- blog.solgard.solutions survives after 10.3K requests made in 2 minutes and hasn't been "hugged to death" by reddit
+- blog.solgard.solutions survived 10.3K requests made in 2 minutes and didn't get "hugged to death" by reddit
 
-note: Some of my services is exposed to the internet and is publicly available. I achieve this using cloudflare tunnels. This require no port openings and is just a simple configuration, mapping the services to the given DNS. 
+note: Some of my services is exposed to the internet and is publicly available. I achieve this using cloudflare tunnels. This require no port openings and is just a simple configuration, mapping the services to the given DNS. Se siste punkt! k6 load testing tool. 
 
 ---
 
 ## Conclusion
 - Old hardware is still usable 👴
-- Good way to learn Kubernetes and to decrease your E-Waste 🌿
+- Decrease your E-Waste 🌿
+- Good way to learn Kubernetes and bragging rights of having a cluster at home 📚
 
 ---
 
