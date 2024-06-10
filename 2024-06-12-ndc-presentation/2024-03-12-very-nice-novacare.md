@@ -36,7 +36,7 @@ note: E-waste is a significant environmental challenge. A total of 154,000 tons 
 
 A "Frakenstein's Lab" Home Server 🧟‍♂️
 
-note: I like to draw similarities to Dr. Frankenstein. We're reviving old laptops by using their logic boards to create a home lab. These laptops, from my student years and early career, still pack a punch similar to many modern single-board computers. It's a shame to let such potential go to waste. Today, we're not just recycling — we're creating a monster of efficiency and sustainability that breathes new life into what was once considered electronic waste.
+note: I like to draw similarities to Dr. Frankenstein. We're reviving old laptops by using their logic boards to create a home lab. These laptops still pack a punch similar to many modern single-board computers. It's a shame to let such potential go to waste. Today, we're not just recycling — we're creating a monster of efficiency and sustainability that breathes new life into what was once considered electronic waste.
 
 ---
 
@@ -45,6 +45,8 @@ note: I like to draw similarities to Dr. Frankenstein. We're reviving old laptop
 ![Alt text](20240213_082927.jpg)
 
 note: Speaking of monsters! This was a picture of my home lab in the prototyping stage. My wife is embarrased that i'm showing you this image, but I'm actually proud of this! Husk spm! Coherent unit.
+
+---
 
 ## kubernetes and k3s
 
