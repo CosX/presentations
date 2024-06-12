@@ -4,7 +4,7 @@ transition: "none"
 enableMenu: false
 ---
 
-### Building a Home Server Using Kubernetes on Old Laptops: A Sustainable Approach to Minimizing E-Waste 
+### Building a Home Server Using Kubernetes on Old Laptops: A Sustainable Approach to Minimizing E-Waste
 
 🏠 + 💻 = ♻️
 
@@ -12,7 +12,7 @@ Karl Solgård (@KarlSolgard) NOVACARE AS
 
 12.06.2024 @ NDC
 
-note: Hello everybody! So nice to be here at NDC! My name is Karl Solgård. I work as a senior consultant at a company called NOVACARE. I'm currently on paternity leave so I have a lot of time to do side projects. And the side project I'm going to show today is my at-home Kubernetes cluster using recycled E-waste. (As one does when in paternity leave...)
+note: Hello everybody! So nice to be here at NDC! My name is Karl Solgård. I work as a senior consultant at a company called NOVACARE. I'm currently on paternity leave so I need every excuse that I can get to get out of the house. I'm going to show you my at-home Kubernetes cluster built with recycled E-waste. (As one does when on paternity leave...)
 
 ---
 
@@ -28,7 +28,7 @@ note: Hello everybody! So nice to be here at NDC! My name is Karl Solgård. I wo
 
 ![Alt text](81176701.jpg)
 
-note: E-waste is a significant environmental challenge. A total of 154,000 tons of e-waste was collected in Norway during 2022, which is about 28 kg per person. Still, a lot of e-waste lies around Norwegian households, dusting away. How can we turn some of this waste into something useful?
+note: E-waste is a significant environmental challenge. A total of 154,000 tons of e-waste was recycled in Norway during 2022, which is about 28 kg per person. Still, a lot of e-waste lies around Norwegian households, dusting away. How can we turn some of this waste into something useful?
 
 ---
 
@@ -36,7 +36,7 @@ note: E-waste is a significant environmental challenge. A total of 154,000 tons 
 
 A "Frakenstein's Lab" Home Server 🧟‍♂️
 
-note: I like to draw similarities to Dr. Frankenstein. We're reviving old laptops by using their logic boards to create a home lab. These laptops still pack a punch similar to many modern single-board computers. It's a shame to let such potential go to waste. Today, we're not just recycling — we're creating a monster of efficiency and sustainability that breathes new life into what was once considered electronic waste.
+note: I like to draw similarities to Dr. Frankenstein. We're reviving old laptops by using their logic boards to create a home lab. These laptops still pack a punch similar to many modern single-board computers. Today, we're not just recycling — we're creating a monster of efficiency and sustainability that breathes new life into what was once considered electronic waste. Hopefully, it won't attack the village in the end.
 
 ---
 
@@ -72,7 +72,7 @@ $ curl -sfL https://get.k3s.io |
   \ K3S_TOKEN=mynodetoken sh -
 ```
 
-note: This takes about 30 seconds to run and will set up your machine as a k3s control plane! This command is also configurable to suit your needs. You can disable things that you want to replace, such as traefik and servicelb.
+note: This takes about 30 seconds to run and will set up your machine as a k3s control plane! This command is also configurable to suit your needs.
 
 ---
 
@@ -95,7 +95,7 @@ note: this is an overview of the relationship between my machines. We're going t
 - Add smartphones as worker nodes (PostmarketOS)
 - Build NAS and connect as a volume provider
 
-note: A collegue of mine encouraged me to try adding phones to the mix. I found an awesome project called PostmarketOS. The project installs a fully fledged Alpine Linux distribution on the phone. My Galaxy S8 is not officially supported, but I've gotten some signs from the maintainers that it might be supported in recent builds...  
+note: A collegue of mine encouraged me to try adding phones to the mix. I found an awesome project called PostmarketOS. The project installs a fully fledged Alpine Linux distribution on the phone. My Galaxy S8 is not officially supported, but I've gotten some signs from the open-sourcerers that it might be supported in recent builds...  
 
 ---
 
